@@ -14,6 +14,18 @@ public class ScalePowerUp : MonoBehaviour
 		if (behaviour != null)
 		{
 			powerupEffect.Apply(behaviour.gameObject);
+			Destroy(gameObject);
 		}
+
+	}
+
+	public void Update()
+	{
+		PowerUpPositionCheck();
+	}
+	public void PowerUpPositionCheck()
+	{
+		if (this.transform.position.y < -10)
+			Destroy(gameObject);
 	}
 }

@@ -172,3 +172,7 @@ MonoBehaviour:
   - {fileID: -75911164829219746, guid: a4134e28756bdb348a170f297d98dc06, type: 3}
   - {fileID: -4891411468588167778, guid: a4134e28756bdb348a170f297d98dc06, type: 3}
   - {fileID: 300666114172867650, guid: a4134e28756bdb348a170f297d98dc06, type: 3}
+  powerUpObjects:
+  - {fileID: 2163074737067713256, guid: 8beb31ac1dc78c444a4199c0cc5d4c39, type: 3}
+  - {fileID: 7141690233157517132, guid: a83c0166a5b2e954ebd3bf4110a6318f, type: 3}
+  - {fileID: 3736990609744215477, guid: 89705b62b91848c42abc79806fe33ebf, type: 3}

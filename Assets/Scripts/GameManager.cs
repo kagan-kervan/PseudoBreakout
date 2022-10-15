@@ -24,6 +24,7 @@ public class GameManager : MonoBehaviour
     public AudioSource audioSource;
     public AudioClip deathSound;
     public AudioClip nexxtLevelSound;
+    public Animator animator;
     // Start is called before the first frame update
     void Start()
     {
@@ -70,6 +71,7 @@ public class GameManager : MonoBehaviour
             paddleObject.SetActive(false);
             paddle.movementvalue = 0;
             paddle.life--;
+            animator.SetTrigger("LifeHighlight");
             Destroy(ballObject);
             levelEditor.DeactiveAllTiles();
             serveCanvas.SetActive(true);
@@ -98,8 +100,9 @@ public class GameManager : MonoBehaviour
         ballObject = Instantiate(ball.gameObject, spawnPos, ball.transform.rotation) as GameObject;
         tempball = ballObject.GetComponent<BallBehaviour>();
         tempball.isAlive = true;
-        
-	}
+        tempball.SetAnimator(ingameScoreText.gameObject);
+
+    }
 
     public void ResetExistingPaddle()
 	{

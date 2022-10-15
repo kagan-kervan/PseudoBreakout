@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3736990609744215475}
   - component: {fileID: 3736990609744215476}
   - component: {fileID: 3736990609744215473}
+  - component: {fileID: -1529290537944950533}
   m_Layer: 0
   m_Name: ScorePowerup
   m_TagString: Untagged
@@ -96,7 +97,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e8c87f38855f7642b788129032e7c44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthEffect: {fileID: 11400000, guid: 31efbf01f3cb70e42b2f3f335705dfd4, type: 2}
+  powerupEffect: {fileID: 11400000, guid: 31efbf01f3cb70e42b2f3f335705dfd4, type: 2}
   behaviour: {fileID: 0}
   paddle: {fileID: 5481980744325037791, guid: b1438ca0f7aa73041a85ba0a701f68e3, type: 3}
 --- !u!61 &3736990609744215473
@@ -125,3 +126,24 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.90625, y: 2.71875}
   m_EdgeRadius: 0
+--- !u!50 &-1529290537944950533
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3736990609744215477}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

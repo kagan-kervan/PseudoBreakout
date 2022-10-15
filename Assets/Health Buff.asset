@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4a54eb4b3ef8864097e3272a32abcb0, type: 3}
   m_Name: Health Buff
   m_EditorClassIdentifier: 
-  amount: 5
+  amount: 2

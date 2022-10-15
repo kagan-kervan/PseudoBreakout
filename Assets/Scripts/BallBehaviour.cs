@@ -17,6 +17,7 @@ public class BallBehaviour : MonoBehaviour
     public AudioSource audioSource;
     public AudioClip hitClip;
     public AudioClip pointClip;
+    public Animator scoreAnimator;
     // Start is called before the first frame update
     void Start()
     {
@@ -53,6 +54,7 @@ public class BallBehaviour : MonoBehaviour
 			{
                 audioSource.PlayOneShot(pointClip);
                 tile.UpdateLifePoint();
+                scoreAnimator.SetTrigger("Highlight");
 			}
 		}
 	}
@@ -71,6 +73,7 @@ public class BallBehaviour : MonoBehaviour
         isAlive = false;
         this.ballBody.velocity = initialvelocity;
         paddleBehaviour.life--;
+        scoreAnimator.SetTrigger("LifeHighlight");
         if (paddleBehaviour.life <= 0)
         {
             return;
@@ -127,4 +130,9 @@ public class BallBehaviour : MonoBehaviour
         this.transform.position = spawnPos;
         isAlive = true;
     }
+
+    public void SetAnimator(GameObject scoreObject)
+	{
+        scoreAnimator = scoreObject.GetComponent<Animator>();
+	}
 }

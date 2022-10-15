@@ -41,6 +41,8 @@ public class LevelEditor : MonoBehaviour
 
     public GameObject SetTiles(int tiernum,int tilenum)
 	{
+        tiernum = Mathf.Min(tiernum, 3);
+        tilenum = Mathf.Min(tilenum, 4);
         GameObject tile;
 		if (tiernum==0)
 		{

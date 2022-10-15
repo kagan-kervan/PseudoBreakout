@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2217638906192892890, guid: a4134e28756bdb348a170f297d98dc06, type: 3}
+  m_Sprite: {fileID: 7451409459291756537, guid: a4134e28756bdb348a170f297d98dc06, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -102,7 +102,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.32, y: 0.16}
+    oldSize: {x: 0.33, y: 0.16}
     newSize: {x: 1, y: 2}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -126,7 +126,7 @@ MonoBehaviour:
   spriteRenderer: {fileID: 8873185598169323066}
   paddle: {fileID: 5481980744325037791, guid: b1438ca0f7aa73041a85ba0a701f68e3, type: 3}
   tier: 1
-  lifepoint: 1
+  lifepoint: 2
   tier1Sprites:
   - {fileID: -2217638906192892890, guid: a4134e28756bdb348a170f297d98dc06, type: 3}
   - {fileID: 7451409459291756537, guid: a4134e28756bdb348a170f297d98dc06, type: 3}
@@ -136,6 +136,10 @@ MonoBehaviour:
   tier2Sprites: []
   tier3Sprites: []
   tier4Sprites: []
+  powerUpObjects:
+  - {fileID: 2163074737067713256, guid: 8beb31ac1dc78c444a4199c0cc5d4c39, type: 3}
+  - {fileID: 7141690233157517132, guid: a83c0166a5b2e954ebd3bf4110a6318f, type: 3}
+  - {fileID: 3736990609744215477, guid: 89705b62b91848c42abc79806fe33ebf, type: 3}
 --- !u!50 &8873185598169323044
 Rigidbody2D:
   serializedVersion: 4

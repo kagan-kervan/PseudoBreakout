@@ -12,6 +12,7 @@ public class TileBehaviour : MonoBehaviour
     public Sprite[] tier2Sprites;
     public Sprite[] tier3Sprites;
     public Sprite[] tier4Sprites;
+    public GameObject[] powerUpObjects;
 
     
     public void TileColourDecider(int value)
@@ -34,7 +35,17 @@ public class TileBehaviour : MonoBehaviour
 
     public void UpdateLifePoint()
 	{
+        int randomnum;
         lifepoint--;
+        randomnum = Random.Range(0, 100);
+		if (randomnum > 75)
+        {
+            int randomindex = Random.Range(0, powerUpObjects.Length);
+            Vector3 pos = transform.position;
+            pos.y = pos.y - 2;
+            Instantiate(powerUpObjects[randomindex], pos, transform.rotation);
+
+        }
         paddle.score = paddle.score + (tier * 200 + 25 * lifepoint)*paddle.scoreMultiplier;
         if (lifepoint <= 0)
 		{

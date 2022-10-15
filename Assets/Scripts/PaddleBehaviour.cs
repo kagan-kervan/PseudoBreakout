@@ -45,6 +45,10 @@ public class PaddleBehaviour : MonoBehaviour
     public float GetValue()
 	{
         float value = Input.GetAxisRaw("Horizontal");
+        if (transform.position.x < -14 && value < 0)
+            value = 0;
+        else if (transform.position.x > 14 && value > 0)
+            value = 0;
         return value;
     }
 

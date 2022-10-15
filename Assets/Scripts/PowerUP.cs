@@ -11,9 +11,20 @@ public class PowerUP : MonoBehaviour
 	public void OnTriggerEnter2D(Collider2D collision)
 	{
 		behaviour = collision.GetComponent<PaddleBehaviour>();
-		if(behaviour != null || collision.GetComponent<BallBehaviour>()!=null)
+		if(behaviour != null)
 		{
 			powerupEffect.Apply(paddle.gameObject);
+			Destroy(gameObject);
 		}
+	}
+
+	public void Update()
+	{
+		PowerUpPositionCheck();
+	}
+	public void PowerUpPositionCheck()
+	{
+		if (this.transform.position.y < -10)
+			Destroy(gameObject);
 	}
 }
