@@ -31,8 +31,7 @@ public class PaddleBehaviour : MonoBehaviour
 	// Update is called once per frame
 	void Update()
     {
-        movementvalue = GetValue();
-        PaddleMovement(movementvalue);
+        PaddleMovementInTouchScreen();
     }
 
     public void PaddleMovement(float value)
@@ -42,6 +41,16 @@ public class PaddleBehaviour : MonoBehaviour
         paddleBody.velocity = velocity;
 	}
 
+    public void PaddleMovementInTouchScreen()
+	{
+		for (int i = 0; i < Input.touchCount; i++)
+        {
+            Vector3 touchPosition = Camera.main.ScreenToWorldPoint(Input.touches[i].position);
+            touchPosition.z = 1;
+            touchPosition.y = transform.position.y;
+            transform.position = touchPosition;
+        }
+    }
     public float GetValue()
 	{
         float value = Input.GetAxisRaw("Horizontal");

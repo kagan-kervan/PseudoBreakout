@@ -30,8 +30,8 @@ public class LevelEditor : MonoBehaviour
 		{
 			for (int j = 0; j < tileArray.GetLength(1); j++)
 			{
-				int randomTierNum = Random.Range((int)(level * 0.1), (int)(1 + level * 0.3));
-				int randomTileNum = Random.Range((int)(level * 0.2), (int)(1 + level * 0.5));
+				int randomTierNum = Random.Range((int)(level*0.1), (int)(1+level*0.4));
+				int randomTileNum = Random.Range((int)(0+(level*0.5)%4), (int)(1 + level * 0.6));
                 GameObject newtile = SetTiles(randomTierNum, randomTileNum);
                 tileArray[i, j] = newtile;
 			}
@@ -74,7 +74,7 @@ public class LevelEditor : MonoBehaviour
     public void DrawtheLevel()
 	{
         float startingPointX = -8.9f;
-        float startingPointY = 4.5f;
+        float startingPointY = 6.8f;
 		for (int i = 0; i < tileArray.GetLength(0); i++)
 		{
 			for (int j = 0; j < tileArray.GetLength(1); j++)
